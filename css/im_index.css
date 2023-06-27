@@ -1,0 +1,232 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: monospace;
+}
+/* estilo pie de página */
+footer{
+    background-color: #000;
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* links de redes sociales */
+footer a img{
+    margin: 10px;
+    width: 20px;
+    height: 20px;
+} 
+/* margen pie de página */
+footer div{
+    margin: 10px 0 0;
+}
+
+.container, .banner_container{
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* fondo */
+.bg_animate{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to right, #352F44, #5C5470);
+    position: relative;
+    overflow: hidden;
+}
+/* encabezado */
+.header_nav{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+} 
+.header_nav .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+/* código de Taller automotriz IM23 */
+.header_nav h1{
+    line-height: 50px;
+    color: #fff;
+    font-family: sans-serif;
+}
+/* ajuste de logo piston */
+.header_nav img{
+    width: 50px;
+    height: 50px;
+}
+/* links de encabezado */
+.header_nav nav a{
+    color:#fff;
+    text-decoration: none;
+    margin-right: 15px;
+}  
+/* al pasar el mouse sobre el encabezado */
+.container nav a:hover{
+    color: #FFAC41;
+    transition: all .3s;
+    transform: scale(1.1);
+}
+/* ajuste de encabezado y los | */
+.container nav a:nth-child(1){
+    margin: 0.1px;
+}
+.container nav a:nth-child(2){
+    padding: 0.2em;
+    margin: 2px;
+    border-left: 1.5px solid #fff;
+    border-right: 1.5px solid #fff ; 
+}
+.container nav a:nth-child(3){
+    margin: -2px;
+}
+.container nav a:nth-child(4){
+    padding: 0.2em;
+    margin: 2px;
+    border-left: 1.5px solid #fff;
+    border-right: 1.5px solid #fff; 
+}
+/* código del banner Contactanos */
+.banner_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+
+}
+.banner_tittle h2{
+    color: #fff;
+    font-size: 60px;
+    font-weight: 800;
+    margin-left: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+/* link Contactanos | inicio */
+.banner_tittle .llamanos{
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    display: inline-block;
+    background:#FFAC41;
+    padding: 20px;
+    border-radius: 8px;
+}
+.banner_tittle .llamanos:hover{
+    color: #FA7D09;
+    font-weight: bold;
+}
+/* animacion y tamaño del civic */
+.banner_img{
+    animation: movimiento 2.5s linear infinite;
+}
+.banner_img img{
+    width: 500px;
+    display: block;
+}
+
+/* burbujas */
+.bubble{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #fff;
+    opacity: .3;
+    position: absolute;
+    bottom: -150;
+    left: 5%;
+    animation: bubbles 3s linear infinite;
+}
+.bubble:nth-child(1){
+    width: 80px;
+    height: 80px;
+    left: 5%;
+    animation-duration: 3s;
+    animation-delay: 3s;
+}
+.bubble:nth-child(2){
+    width: 100px;
+    height: 100px;
+    left: 35%;
+    animation-duration: 3s;
+    animation-delay: 5s;
+}
+.bubble:nth-child(3){
+    width: 20px;
+    height: 20px;
+    left: 15%;
+    animation-duration: 1.5s;
+    animation-delay: 7s;
+}
+.bubble:nth-child(4){
+    width: 50px;
+    height: 50px;
+    left: 90%;
+    animation-duration: 6s;
+    animation-delay: 3s;
+}
+.bubble:nth-child(5){
+    width: 70px;
+    height: 70px;
+    left: 65%;
+    animation-duration: 3s;
+    animation-delay: 1s;
+}
+.bubble:nth-child(6){
+    width: 20px;
+    height: 20px;
+    left: 50%;
+    animation-duration: 4s;
+    animation-delay: 5s;
+}
+.bubble:nth-child(7){
+    width: 30px;
+    height: 30px;
+    left: 40%;
+    animation-duration: 4s;
+    animation-delay: 5s;
+}
+.bubble:nth-child(8){
+    width: 100px;
+    height: 100px;
+    left: 50%;
+    animation-duration: 5s;
+    animation-delay: 5s;
+}
+/* para aplicar el movimiento de las burbujas */
+@keyframes bubbles{
+    0%{
+        bottom: 0;
+        opacity: 0;
+    }
+    30%{
+        transform: translateX(30px);
+    }
+    50%{
+        opacity: .4;
+    }
+    100%{
+        bottom: 100vh;
+        opacity: 0;
+    }
+}
+/* para aplicar el movimiento del carro */
+@keyframes movimiento{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(30px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}

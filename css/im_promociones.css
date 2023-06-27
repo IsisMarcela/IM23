@@ -1,0 +1,152 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* estilos de cuerpo */
+body{
+    background-image: url('../recursos/fondo.jpg');
+    padding-top: 5em;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas: "header header"
+                        "tabla aside"
+                        "footer footer";
+}
+/* estilo para encabezado fijo */
+header{
+    grid-area: header;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+/* estilos para encabezado */
+header img{
+    width: 55px;
+    display: block;
+}
+
+/* estilo de la lista */
+header nav ul{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-color: #FFB740;
+    justify-content: space-evenly;
+    text-align: center;
+    height: 60px;
+}
+/* estilo de los links */
+header nav ul a{
+    text-decoration: none;
+    transition: all 0.5s ease;
+    padding: 0.5em 1em;
+    display: block;
+    color: black;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+/* al pasar el mouse:  */
+header nav ul a:hover{
+    color: #fff;
+    font-weight: bold;
+    padding: 0.5em 1em;
+}
+/* alinear el menu */
+header nav ul li{
+    align-self: center;
+}
+/* estilos de aside */
+aside{
+    grid-area: aside;
+    padding: 2rem;
+    text-align: start;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* estilo para titulos h3 de aside */
+aside h3{
+    font-size: 18px;
+}
+/* estilos para p de aside */
+aside p{
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* pie de pag */
+footer{
+    grid-area: footer;
+    background-color: #000;
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* links de redes sociales */
+footer a img{
+    margin: 10px;
+    width: 20px;
+    height: 20px;
+} 
+/* ajuste */
+footer div{
+    margin: 10px 0 0;
+}
+
+/* estilos de la tabla */
+.tabla{
+    grid-area: tabla;
+    padding: 1rem;
+    text-align: center;
+    background-color: #FFB740;
+    margin: 85px;
+    width: 90%;
+} 
+/* estilo texto promociones */
+.promos h1{
+    padding: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* estilos de p en tabla de promos */
+.promos p{
+    padding-left: 2rem;
+    font-size: 17px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* estilo de encabezado de tabla de promo */
+.titulo, .descrip{
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 5rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+/* ajuste de segunda columna de tabla */
+.descrip{
+    width: 80%;
+}
+/* tabla */
+table{
+    border: 2px solid #7E7474;
+    width: 100%;
+}
+/* estilo de tabla para renglones */
+table td{
+    font-size: 17px;
+    line-height: 4rem;
+    padding: 14px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* estilos de tabla para información de promos */
+.uno{
+    line-height: 18px;
+    text-align: start;
+    padding-left: 2rem;
+}
+.uno1{
+    line-height: 18px;
+    text-align: center;
+    padding-left: 2rem;
+}

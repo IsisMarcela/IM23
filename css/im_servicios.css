@@ -1,0 +1,243 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+    background-color:#fff;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "header header header aside"
+                        "body body body aside"
+                        "footer footer footer aside";
+}
+
+header{
+    grid-area: header;
+}
+
+main{
+    background-image: url('../recursos/fondo.jpg');
+    grid-area: body;
+}
+
+aside{
+    grid-area: aside;
+    margin: 40px 10px;
+    text-align: center;
+}
+
+aside img{
+    width: 80%;
+    height: 10%;
+}
+
+footer{
+    background-color: #000;
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* links de redes sociales */
+footer a img{
+    margin: 10px;
+    width: 20px;
+    height: 20px;
+} 
+/* ajuste */
+footer div{
+    margin: 10px 0 0;
+}
+
+/* estilos para encabezado */
+header img{
+    width: 55px;
+    display: block;
+}
+
+/* estilo de la lista */
+header nav ul{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-color: #FFB740;
+    justify-content: space-evenly;
+    text-align: center;
+    height: 60px;
+}
+/* estilo de los links */
+header nav ul a{
+    text-decoration: none;
+    transition: all 0.5s ease;
+    padding: 0.5em 1em;
+    display: block;
+    color: black;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+/* al pasar el mouse:  */
+header nav ul a:hover{
+    color: #fff;
+    font-weight: bold;
+    padding: 0.5em 1em;
+}
+/* alinear el menu */
+header nav ul li{
+    align-self: center;
+}
+
+/* tarjetas */
+.wrap{
+    width: 100px;
+    margin: 30px auto;
+    display: flex;
+    justify-content: center;
+}
+
+.slide-wrap{
+    margin: 10px;
+    /* para dar el giro con perspectiva */
+    -webkit-perspective: 800;
+    perspective: 800;
+}
+
+/* efecto de tarjeta */
+.slide{
+    width: 320px;
+    height: 320px;
+    /* para cambiar la letra inversa */
+    position: relative;
+    transform-style: preserve-3d;
+    transition: 0.7s ease;
+    /* para sombra */
+    box-shadow: 5px 8px 5px rgb(0,0,0,0.5);
+    background-color: black;
+}
+
+
+.front, .back{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* para ocultar el back de tarjeta */
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+/* frente */
+.front{
+    width: 100%;
+    /* para centrar texto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;  
+    text-shadow: #000 5px 5px 5px;
+    
+}
+
+/* para la rotacion y edicion de back*/
+.back{
+    transform: rotateY(180deg);  
+    padding: 15px; 
+}
+
+.back p{
+    justify-content: center;
+    align-items: center;
+    text-align: start;
+    color: #fff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+}
+/* lista de tarjeta atras*/
+.back ul{
+    margin: 20px;
+    justify-content: space-evenly;
+    text-align: start;
+    color: #fff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+} 
+/* estilo de texto en tarjeta atras */
+.back ol{
+    margin: 10px;
+    justify-content: space-evenly;
+    text-align: start;
+    color: #fff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+} 
+
+/* rotacion al pasar el mouse y mostrar back*/
+.slide-wrap:hover .slide{
+    transform: rotateY(180deg);
+}
+
+/* fondo de tarjetas en orden front y back*/
+.slide1{
+    background-image: url('../recursos/frenos.jpg');
+}
+.bslide1{
+    background-image: url('../recursos/bfrenos.jpg')
+}
+
+.slide2{
+    background-image: url('../recursos/afimayor.jpg');
+}
+.bslide2{
+    background-image: url('../recursos/bafimayor.jpg');
+}
+
+.slide3{
+    background-image: url('../recursos/afimenor.jpg');
+}
+.bslide3{
+    background-image: url('../recursos/bafimenor.jpg');
+}
+
+.slide4{
+    background-image: url('../recursos/suspension.jpg');
+}
+.bslide4{
+    background-image: url('../recursos/bsuspension.jpg');
+}
+
+.slide5{
+    background-image: url('../recursos/diageneral.jpg');
+}
+.bslide5{
+    background-image: url('../recursos/bdiageneral.jpg');
+}
+
+.slide6{
+    background-image: url('../recursos/diagelec.jpg');
+}
+.bslide6{
+    background-image: url('../recursos/bdiagelec.jpg');
+}
+
+.slide7{
+    background-image: url('../recursos/mant.jpg');
+}
+.bslide7{
+    background-image: url('../recursos/bmant.jpg');
+}
+
+.slide8{
+    background-image: url('../recursos/trans.jpg');
+}
+.bslide8{
+    background-image: url('../recursos/btrans.jpg');
+}
+
+.slide{
+    background-image: url('../recursos/clutch.jpg');
+}
+.bslide9{
+    background-image: url('../recursos/bclutch.jpg');
+}

@@ -1,0 +1,117 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* estilo de cuerpo, grid */
+body{
+    display: grid;
+    background-image: url('../recursos/fondo.jpg');
+    padding-top: 5em;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "header header"
+                        "main figuras"
+                        "footer footer";
+}
+/* estilo de encabezado */
+header{
+    grid-area: header;
+    /* para hacer el encabezado fijo */
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+/* estilos para encabezado */
+header img{
+    width: 55px;
+    display: block;
+}
+
+/* estilo de la lista */
+header nav ul{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-color: #FFB740;
+    justify-content: space-evenly;
+    text-align: center;
+    height: 60px;
+}
+/* estilo de los links */
+header nav ul a{
+    text-decoration: none;
+    transition: all 0.5s ease;
+    padding: 0.5em 1em;
+    display: block;
+    color: black;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+/* al pasar el mouse:  */
+header nav ul a:hover{
+    color: #fff;
+    font-weight: bold;
+    padding: 0.5em 1em;
+}
+/* alinear el menu */
+header nav ul li{
+    align-self: center;
+}
+/* estilo de la seccion grid main, donde van las sucursales y sus direcciones */
+article{
+    grid-area: main;
+    margin: 10px 40px;
+    padding: 0.5em;
+    text-align: start;
+}
+/* estilo de la seccion frid figuras */
+.figuras{
+    grid-area: figuras;
+    margin: 10PX 40px;
+    padding: 0.5em;
+    text-align: end;
+}
+
+/* estilo de h1 */
+body h1{
+    padding: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* pie de pag */
+footer{
+    grid-area: footer;
+    background-color: #000;
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* links de redes sociales */
+footer a img{
+    margin: 10px;
+    width: 20px;
+    height: 20px;
+} 
+/* ajuste */
+footer div{
+    margin: 10px 0 0;
+}
+/* estilo texto de sucursales */
+.sucursales div{
+    padding: 2rem;
+    font-size: 17px;
+    color: #000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* estilo palabra "Sucursal..." */
+.sucursales div dl{
+    color: #000;
+    font-weight: bold;
+}
+/* ajuste para imagenes/figuras de las sucursales */
+figure img{
+    padding-top: 00.5em;
+}
